@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام تشغيل مشاريع التخرج | GPMS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="auth-container" class="auth-container">
+        <div class="auth-card">
+            <h2>تسجيل الدخول | GPMS</h2>
+            <p>نظام تشغيل وإدارة مشاريع التخرج المتقدم</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>اسم المستخدم</label>
+                    <input type="text" id="username" required placeholder="اكتب هنا اسم المستخدم (leader)">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">دخول للنظام</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="app-container" class="app-container hidden">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>GPOS v1.0</span>
+                </div>
+                <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <div class="user-profile-summary">
+                <div class="avatar">ع</div>
+                <div class="user-info">
+                    <h4 id="user-display-name">عبدالرحمن أحمد</h4>
+                    <span class="badge">Project Leader</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-view="dashboard"><i class="fa-solid fa-chart-pie"></i> لوحة القيادة</a>
+                <a href="#" class="nav-item" data-view="tasks"><i class="fa-solid fa-tasks"></i> إدارة المهام</a>
+                <a href="#" class="nav-item" data-view="chat"><i class="fa-solid fa-comments"></i> نظام المحادثة</a>
+                <a href="#" class="nav-item" data-view="research"><i class="fa-solid fa-microscope"></i> المركز البحثي</a>
+                <a href="#" class="nav-item" data-view="evaluations"><i class="fa-solid fa-star"></i> التقييمات</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="btn btn-logout"><i class="fa-solid fa-right-from-bracket"></i> خروج</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="البحث السريع...">
+                </div>
+            </header>
+            <div id="view-wrapper" class="view-wrapper"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
